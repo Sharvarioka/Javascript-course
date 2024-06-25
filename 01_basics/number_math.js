@@ -1,4 +1,4 @@
-const score = 100.11678;
+const score = 100;
 const games = new Number(300);
 console.log(score, games, typeof games, typeof games.valueOf())
 

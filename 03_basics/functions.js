@@ -40,7 +40,11 @@ console.log("//this inside function")
 function tryingThis() {
   let userName = "p";
   console.log(this) //prints big global object
-  console.log("this.username: ", this.userName) //return udefined as "parameter with this" returns value only inside object
+  // function printing() {
+  console.log("this.username:----", this.userName) //return udefined as "parameter with this" returns value only inside object
+  // }
+  // printing()
+
 }
 tryingThis();
 
@@ -50,3 +54,8 @@ const output = () => {
   console.log("this.username in arrow function: ", this.userName) //return udefined as "parameter with this" returns value only inside object
 }
 output();
+
+/* function currying -> 
+breaking down a function that takes multiple arguments into a 
+series of functions that take one argument each.*/
+

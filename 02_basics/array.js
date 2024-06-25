@@ -49,3 +49,13 @@ const q = 100;
 const r = 200;
 //of creates new array of values
 console.log(Array.of(p, q, r))
+
+
+// ---rest operator vs spread
+//example of rest ->  rest operator puts the rest of some specific user-supplied values into a JavaScript array 
+function myBio(firstName, lastName, ...otherInfo) {
+  return otherInfo;
+}
+
+//Example of spread -> spread syntax expands iterables into individual elements.
+myBio(...["Oluwatobi", "Sofela", "CodeSweetly"]);

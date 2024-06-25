@@ -8,5 +8,5 @@ let -> block scoped, hoisting(definition before declaration) not allowed
 var-> function scoped, hoisting allowed
 const-> reassigning new value not allowed
 */
-
+// temporal deadzone
 let userId; // prints undefined

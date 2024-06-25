@@ -8,3 +8,5 @@
 (function sayHi() { console.log("HI") })(); //named IIFE
 //or 
 ((useName) => console.log(`Hello ${useName}`))('Pree');
+
+// delete -> deletes works on object only. 

@@ -19,9 +19,9 @@ console.log(eval(s2.valueOf())); // returns the number 4
 whereas charAt needs +ve indices only, it return empty string for non-positive indices*/
 console.log(userName.charAt(userName.length - 2), userName.at(-2))
 
-const index = 1;
+const index = 100;
 // charCodeAt(out of range returns NaN) and codePointAt(out of range returns undefined) return unicode of the charater at given index
-console.log(`unicode of character ${userName.charAt(index)} at index ${index} is ${userName.charCodeAt(100)}`);
+console.log(`unicode of character ${userName.charAt(index)} at index ${index} is ${userName.charCodeAt(index)}`);
 
 
 /* Other methods: concat,
@@ -34,10 +34,10 @@ lastIndexOf(serachString, position-> optional-> default = infinity)
 */
 
 // slice-> extracts a section of this string and returns it as a new string, without modifying the original string.
-//substring -> does same job as string
+//substring -> does same job as slice
 console.log(userName.slice(1, 5));
 console.log(userName.substring(1, 5));
-// split-> dives string into array by dividing on specific character
+// split-> divides string into array by dividing on specific character
 
 //trim -> remove whitespace
 // Other methods -> trimStart(), trimEnd()

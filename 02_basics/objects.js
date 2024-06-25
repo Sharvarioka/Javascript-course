@@ -23,7 +23,19 @@ const new_obj = Object.assign({}, user, contact_info);
 console.log("combine with assign", new_obj);
 const updated = { ...user, ...contact_info };
 console.log("combine with spread operator", updated);
+
+//--- deepcopy
+const deepCopy = JSON.parse(JSON.stringify(user))
 console.log(Object.keys(user));
 console.log(Object.values(user));
 console.log(Object.entries(user));
 console.log(user.hasOwnProperty('email')); // to check user has key=email
+
+for (const key in user) {
+  if (Object.hasOwnProperty.call(user, key)) {
+    const element = user[key];
+    console.log("ele: ", element)
+
+  }
+}
+// --- Object.create(<obj_reference>)

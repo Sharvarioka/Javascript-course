@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JS tutorial | DOM</title>
+	</head>
+	<body style="background-color: black; color: white">
+		<ul class="language">
+			<li>Javascript</li>
+		</ul>
+	</body>
+
+	<script>
+		const addLanguage = (langName) => {
+			const li = document.createElement("li");
+			li.innerHTML = `${langName}`;
+			document.querySelector(".language").appendChild(li);
+		};
+
+		addLanguage("python");
+
+		const addLanguageOpti = (langName) => {
+			const li = document.createElement("li");
+			li.appendChild(document.createTextNode(langName));
+			document.querySelector(".language").appendChild(li);
+		};
+
+		addLanguageOpti("Golang");
+
+		//Edit
+		const secondLang = document.querySelector("li:nth-child(2)");
+		// ---- Method 1 ----
+		// secondLang.innerHTML = "Mojo"; // not optimized
+		// ---------------
+
+		//---- Method 2 ----
+		// const newLi = document.createElement("li");
+		// newLi.textContent = "Mojo";
+		// secondLang.replaceWith(newLi);
+		// ----------------
+		// ---- Method 3 ----
+		const newLi = document.createElement("li");
+		newLi.appendChild(document.createTextNode("Mojooooo"));
+		secondLang.replaceWith(newLi);
+		// ------------------
+
+		// ----- Method 4 ----
+		const firstLang = document.querySelector("li:first-child");
+		firstLang.outerHTML = "<li>Ruby on rails</li>";
+
+		//remove
+		const lastLang = document.querySelector("li:last-child");
+		lastLang.remove();
+	</script>
+</html>
